@@ -23,7 +23,7 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row">
               <div className="w-full">
                 <h1 className="text-5xl font-bold mb-2 text-center">
-                  Diego Molina :V
+                  Diego Molina
                 </h1>
               </div>
             </div>
