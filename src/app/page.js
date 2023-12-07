@@ -1,10 +1,69 @@
 "use client";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import fondoConfig from "./components/config/fondo-config";
 import Header from "./components/header";
+import Proyectos from "./pages/proyectos";
+import Tarjetas from "./components/tarjetas"
+
 export default function Home() {
+  const imagesdeporte = [
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837983/Portafolio/15665755_10211386478399980_2727440500788268227_n_votplp.jpg",
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837992/Portafolio/FOTOS_IPHONE_152_mangdr.jpg",
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701838006/Portafolio/6517_10201291752518142_145540072_n_viqnez.jpg",
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794612/Portafolio/23561525_10214573694038379_5356516484944621923_n_mq9b8k.jpg",
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794743/Portafolio/IMG_20231205_100327_gjxqbk.jpg",
+  ];
+  const imagesprogramacion = ["", "", "", "URL_IMAGEN_4", "URL_IMAGEN_5"];
+  const imagesjuegos = ["", "", "", "URL_IMAGEN_4", "URL_IMAGEN_5"];
+
+  const Carousel = ({ images }) => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const handlePrevClick = () => {
+      setCurrentSlide(
+        (prevSlide) => (prevSlide - 1 + images.length) % images.length
+      );
+    };
+
+    const handleNextClick = () => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    };
+
+    return (
+      <div className="relative max-w-full overflow-hidden rounded-md h-80">
+        <div
+          className="flex transition-transform duration-300 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {images.map((imageUrl, index) => (
+            <img
+              key={index}
+              src={imageUrl}
+              alt={`Imagen ${index + 1}`}
+              className="w-full h-full object-cover flex-shrink-0"
+            />
+          ))}
+        </div>
+        <div className="absolute top-1/2 transform -translate-y-1/2 flex space-x-2">
+          <button
+            onClick={handlePrevClick}
+            className="p-2 bg-gray-200 rounded-full text-gray-600"
+          >
+            &#8592;
+          </button>
+          <button
+            onClick={handleNextClick}
+            className="p-2 bg-gray-200 rounded-full text-gray-600"
+          >
+            &#8594;
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -15,11 +74,11 @@ export default function Home() {
       </div>
       <div className="flex flex-col h-screen" id="test">
         <Header />
-        <div className="flex-1 flex-wrap justify-center items-center flex-col mr-4 ml-4">
-          {/* CUADRO SUPERIOR SOBRE TARJETAS */}
-          {/* CUADRO SUPERIOR SOBRE TARJETAS */}
+        <div className="flex-1 flex-wrap justify-center items-center flex-col mx-4">
+          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE */}
+          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE */}
 
-          <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-8 border-solid border-black border-4 text-black hover:text-white mx-auto w-full lg:w-1/3">
+          <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-4 border-solid border-black border-4 text-black hover:text-white mx-auto w-full lg:w-1/3">
             <div className="flex flex-col lg:flex-row">
               <div className="w-full">
                 <h1 className="text-5xl font-bold mb-2 text-center">
@@ -29,7 +88,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-4 lg:mx-0 mt-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-4 lg:mx-0 mt-4 mb-4">
             {/* PRIMERA TARJETA */}
             {/* PRIMERA TARJETA */}
 
@@ -55,7 +114,7 @@ export default function Home() {
                   {/* DESCRIPCION */}
                   {/* DESCRIPCION */}
 
-                  <h1 className="text-2xl font-semibold mb-2">
+                  <h1 className="text-2xl font-semibold mb-2 underline decoration-2 underline-offset-8">
                     Descripción Persona
                   </h1>
                   <p className="">
@@ -64,7 +123,9 @@ export default function Home() {
                     aprender y aplicar nuevas tecnologías para crear soluciones
                     innovadoras.
                   </p>
-                  <h1 className="text-2xl font-semibold mt-6 mb-2">Título</h1>
+                  <h1 className="text-2xl font-semibold mt-6 mb-2 underline decoration-2 underline-offset-8">
+                    Título
+                  </h1>
                   <p className="">
                     Ingeniero Civil en Computación e Informática
                     <br />
@@ -76,7 +137,6 @@ export default function Home() {
 
             {/* SEGUNDA TARJETA */}
             {/* SEGUNDA TARJETA */}
-            {/* SEGUNDA TARJETA */}
 
             <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
               {/* Contenido */}
@@ -84,7 +144,7 @@ export default function Home() {
                 {/* Lenguajes y Tecnologías */}
                 <div className="w-full lg:w-full lg:pr-4 flex flex-col lg:items-center">
                   <div className="mb-6 w-full">
-                    <h2 className="text-4xl font-bold mb-2 text-center">
+                    <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                       Frontend
                     </h2>
                     {/* Agrega imágenes o logos de tecnologías de Frontend */}
@@ -128,7 +188,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mb-6 w-full">
-                    <h2 className="text-4xl font-bold mb-2 text-center">
+                    <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                       Backend
                     </h2>
                     {/* Agrega imágenes o logos de tecnologías de Backend */}
@@ -172,7 +232,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <h2 className="text-4xl font-bold mb-2 text-center">
+                    <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                       Software
                     </h2>
                     {/* Agrega imágenes o logos de tecnologías de Software */}
@@ -217,49 +277,50 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* Habilidades blandas */}
-              <div className="w-full lg:w-full lg:pl-4 flex flex-col items-center lg:items-start">
-                <h2 className="text-lg font-semibold mt-4 mb-2">
-                  Habilidades Blandas
-                </h2>
-                <p className="">
-                  Comunicación, Trabajo en Equipo, Resolución de Problemas, etc.
-                </p>
-              </div>
             </div>
 
             {/* TERCERA TARJETA */}
             {/* TERCERA TARJETA */}
-            {/* TERCERA TARJETA */}
+            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
+              <Proyectos />
+            </div>
+          </div>
 
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white lg:items-center">
-              {/* Contenido */}
-              <div className="flex flex-col lg:flex-row justify-center items-center">
-                {/* Hobbies e Intereses */}
-                <div className="w-full lg:w-full lg:pl-4 flex flex-col items-center">
-                  <h2 className="text-lg font-semibold mb-2">
-                    Hobbies e Intereses
-                  </h2>
-                  <p className="">
-                    Videojuegos, Natación, Gimnasio, Programar, Leer, entre
-                    otros.
-                  </p>
+          {/* TARJETA INFERIOR */}
+          {/* TARJETA INFERIOR */}
+
+          <div className="mx-4 lg:mx-0 mb-4">
+            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
+              <Tarjetas />
+            </div>
+          </div>
+          <div className="mx-4 lg:mx-0 mb-4">
+            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
+              <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
+                Hobbies e Intereses
+              </h2>
+              <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
+                <div className="flex-1 lg:w-1/3 md:w-2/3">
+                  <div className="h-full flex flex-col justify-center items-center">
+                    <h2 className="text-2xl font-semibold mb-2">Deporte</h2>
+                    <Carousel images={imagesdeporte} />
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white lg:items-center">
-              {/* Contenido */}
-              <div className="flex flex-col lg:flex-row justify-center items-center">
-                {/* Hobbies e Intereses */}
-                <div className="w-full lg:w-full lg:pl-4 flex flex-col items-center">
-                  <h2 className="text-lg font-semibold mb-2">
-                    Hobbies e Intereses
-                  </h2>
-                  <p className="">
-                    Videojuegos, Natación, Gimnasio, Programar, Leer, entre
-                    otros.
-                  </p>
+                <div className="flex-1 lg:w-1/3">
+                  <div className="h-full flex flex-col justify-center items-center">
+                    <h2 className="text-2xl font-semibold mb-2">Videojuegos</h2>
+                    <Carousel images={imagesjuegos} />
+                  </div>
+                </div>
+
+                <div className="flex-1 lg:w-1/3">
+                  <div className="h-full flex flex-col justify-center items-center">
+                    <h2 className="text-2xl font-semibold mb-2">
+                      Programación
+                    </h2>
+                    <Carousel images={imagesprogramacion} />
+                  </div>
                 </div>
               </div>
             </div>
