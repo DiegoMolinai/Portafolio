@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../estilos/Tarjetas.css";
+import "../estilos/tarjetas.css";
 import Button from "react-bootstrap/Button";
-import ModalTarjetas from "./modals/modalTarjetas";
+import ModalTarjetas from "./modals/modaltarjetas";
 
 const Tarjetas = () => {
   const [modalShow, setModalShow] = useState(false);
