@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useCallback, useState } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -7,9 +7,7 @@ import Header from "./components/header";
 import Proyectos from "./pages/proyectos";
 import Tarjetas from "./components/tarjetas";
 
-
 export default function Home() {
-
   const imagesdeporte = [
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837983/Portafolio/15665755_10211386478399980_2727440500788268227_n_votplp.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837992/Portafolio/FOTOS_IPHONE_152_mangdr.jpg",
@@ -17,7 +15,13 @@ export default function Home() {
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794612/Portafolio/23561525_10214573694038379_5356516484944621923_n_mq9b8k.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794743/Portafolio/IMG_20231205_100327_gjxqbk.jpg",
   ];
-  const imagesprogramacion = ["", "", "", "", ""];
+  const imagesprogramacion = [
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837683/Portafolio/Screenshot_1_egdynl.png",
+    "",
+    "",
+    "",
+    "",
+  ];
   const imagesjuegos = ["", "", "", "", ""];
 
   const Carousel = ({ images }) => {
@@ -34,7 +38,7 @@ export default function Home() {
     };
 
     return (
-      <div className="relative max-w-full overflow-hidden rounded-md h-80">
+      <div className="relative max-w-full overflow-hidden rounded-md h-80 lg:w-1/2">
         <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -76,7 +80,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col h-screen" id="test">
         <Header />
-        <div className="flex-1 flex-wrap justify-center items-center flex-col mx-4">
+        <div className="flex-1 flex-wrap justify-center items-center flex-col mx-2">
           {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
           {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
 
@@ -140,15 +144,15 @@ export default function Home() {
 
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
               {/* Contenido */}
-              <div className="flex flex-col lg:flex-row justify-center items-center">
+              <div className="flex flex-col lg:flex-row items-center">
                 {/* Lenguajes y Tecnologías */}
-                <div className="w-full lg:w-full lg:pr-4 flex flex-col lg:items-center">
+                <div className="w-full lg:w-full flex flex-col lg:justify-between">
                   <div className="mb-6 w-full">
                     <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                       Frontend
                     </h2>
                     {/* Agrega imágenes o logos de tecnologías de Frontend */}
-                    <div className=" rounded flex flex-wrap justify-center lg:justify-center">
+                    <div className="flex flex-wrap justify-center lg:justify-between">
                       <img
                         src="https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701452549/Portafolio/icons8-html-480_zdmbnx.png"
                         alt="HTML"
@@ -192,7 +196,7 @@ export default function Home() {
                       Backend
                     </h2>
                     {/* Agrega imágenes o logos de tecnologías de Backend */}
-                    <div className=" rounded flex flex-wrap justify-center lg:justify-center">
+                    <div className="flex flex-wrap justify-center lg:justify-between">
                       <img
                         src="https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701452598/Portafolio/icons8-python-480_ryfeid.png"
                         alt="Python"
@@ -236,7 +240,7 @@ export default function Home() {
                       Software
                     </h2>
                     {/* Agrega imágenes o logos de tecnologías de Software */}
-                    <div className=" rounded flex flex-wrap justify-center lg:justify-center">
+                    <div className="flex flex-wrap justify-center lg:justify-between">
                       <img
                         src="https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701452588/Portafolio/icons8-windows-480_lpx8rm.png"
                         alt="Windows"
@@ -282,7 +286,7 @@ export default function Home() {
             {/* TERCERA TARJETA */}
 
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
-              <Proyectos />
+              {/* <Proyectos /> */}
             </div>
           </div>
           {/* TARJETAS PROYECTOS INFERIOR */}
@@ -293,6 +297,8 @@ export default function Home() {
               <Tarjetas />
             </div>
           </div>
+          {/* TARJETAS GALERIA IMAGENES HOBBIES E INTERESES */}
+          {/* TARJETAS GALERIA IMAGENES HOBBIES E INTERESES */}
 
           <div className="mx-4 lg:mx-0 mb-4">
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
