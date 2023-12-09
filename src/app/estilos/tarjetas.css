@@ -36,8 +36,9 @@ html {
     position: relative;
     -webkit-backface-visibility: hidden;
     width: 415px;
-    margin-bottom: 35px;
     max-width: 100%;
+    width: 19rem;
+    height: 32rem; 
   }
   
   .flip-box {
@@ -59,6 +60,9 @@ html {
     -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border: 4px solid #000;
+    border-radius: 8px;
+
   }
   
   .flip-box-front {
@@ -133,7 +137,7 @@ html {
   
   .flip-box-button {
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 4px solid #fff;
     border-radius: 2px;
     color: #fff;
     cursor: pointer;

@@ -1,13 +1,15 @@
-"use client";
-import React, { useCallback, useEffect, useState } from "react";
+'use client';
+import React, { useCallback, useState } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import fondoConfig from "./components/config/fondo-config";
 import Header from "./components/header";
 import Proyectos from "./pages/proyectos";
-import Tarjetas from "./components/tarjetas"
+import Tarjetas from "./components/tarjetas";
+
 
 export default function Home() {
+
   const imagesdeporte = [
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837983/Portafolio/15665755_10211386478399980_2727440500788268227_n_votplp.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837992/Portafolio/FOTOS_IPHONE_152_mangdr.jpg",
@@ -15,8 +17,8 @@ export default function Home() {
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794612/Portafolio/23561525_10214573694038379_5356516484944621923_n_mq9b8k.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794743/Portafolio/IMG_20231205_100327_gjxqbk.jpg",
   ];
-  const imagesprogramacion = ["", "", "", "URL_IMAGEN_4", "URL_IMAGEN_5"];
-  const imagesjuegos = ["", "", "", "URL_IMAGEN_4", "URL_IMAGEN_5"];
+  const imagesprogramacion = ["", "", "", "", ""];
+  const imagesjuegos = ["", "", "", "", ""];
 
   const Carousel = ({ images }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -75,10 +77,10 @@ export default function Home() {
       <div className="flex flex-col h-screen" id="test">
         <Header />
         <div className="flex-1 flex-wrap justify-center items-center flex-col mx-4">
-          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE */}
-          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE */}
+          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
+          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
 
-          <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-4 border-solid border-black border-4 text-black hover:text-white mx-auto w-full lg:w-1/3">
+          <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-4 border-solid border-black border-4 text-black hover:text-white mx-auto w-full lg:w-1/3">
             <div className="flex flex-col lg:flex-row">
               <div className="w-full">
                 <h1 className="text-5xl font-bold mb-2 text-center">
@@ -92,7 +94,7 @@ export default function Home() {
             {/* PRIMERA TARJETA */}
             {/* PRIMERA TARJETA */}
 
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
               {/* CONTENIDO */}
               {/* CONTENIDO */}
 
@@ -110,23 +112,22 @@ export default function Home() {
                 {/* INFORMACION */}
                 {/* INFORMACION */}
 
-                <div className="w-full rounded lg:w-1/2 lg:pl-4">
+                <div className="w-full font-bold rounded lg:w-1/2 lg:pl-4">
                   {/* DESCRIPCION */}
                   {/* DESCRIPCION */}
-
-                  <h1 className="text-2xl font-semibold mb-2 underline decoration-2 underline-offset-8">
+                  <h1 className="text-4xl mb-2 underline decoration-2 underline-offset-8 font-bold">
                     Descripción Persona
                   </h1>
-                  <p className="">
+                  <p>
                     Soy un apasionado desarrollador web con experiencia en
                     tecnologías como React, Node.js y MongoDB. Me encanta
                     aprender y aplicar nuevas tecnologías para crear soluciones
                     innovadoras.
                   </p>
-                  <h1 className="text-2xl font-semibold mt-6 mb-2 underline decoration-2 underline-offset-8">
+                  <h1 className="text-4xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
                     Título
                   </h1>
-                  <p className="">
+                  <p>
                     Ingeniero Civil en Computación e Informática
                     <br />
                     Universidad Mayor
@@ -134,11 +135,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             {/* SEGUNDA TARJETA */}
             {/* SEGUNDA TARJETA */}
 
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
               {/* Contenido */}
               <div className="flex flex-col lg:flex-row justify-center items-center">
                 {/* Lenguajes y Tecnologías */}
@@ -278,24 +278,24 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* TERCERA TARJETA */}
+            {/* TERCERA TARJETA */}
 
-            {/* TERCERA TARJETA */}
-            {/* TERCERA TARJETA */}
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
               <Proyectos />
             </div>
           </div>
-
-          {/* TARJETA INFERIOR */}
-          {/* TARJETA INFERIOR */}
+          {/* TARJETAS PROYECTOS INFERIOR */}
+          {/* TARJETAS PROYECTOS INFERIOR */}
 
           <div className="mx-4 lg:mx-0 mb-4">
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
               <Tarjetas />
             </div>
           </div>
+
           <div className="mx-4 lg:mx-0 mb-4">
-            <div className="backdrop-blur-xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
               <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                 Hobbies e Intereses
               </h2>
@@ -304,13 +304,6 @@ export default function Home() {
                   <div className="h-full flex flex-col justify-center items-center">
                     <h2 className="text-2xl font-semibold mb-2">Deporte</h2>
                     <Carousel images={imagesdeporte} />
-                  </div>
-                </div>
-
-                <div className="flex-1 lg:w-1/3">
-                  <div className="h-full flex flex-col justify-center items-center">
-                    <h2 className="text-2xl font-semibold mb-2">Videojuegos</h2>
-                    <Carousel images={imagesjuegos} />
                   </div>
                 </div>
 
