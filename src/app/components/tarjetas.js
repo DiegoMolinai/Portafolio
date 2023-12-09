@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../estilos/tarjetas.css";
+import "../estilos/Tarjetas.css";
 import Button from "react-bootstrap/Button";
-import ModalTarjetas from "./modals/modaltarjetas";
+import ModalTarjetas from "./modals/modalTarjetas";
 
-const tarjetas = () => {
+const Tarjetas = () => {
   const [modalShow, setModalShow] = useState(false);
 
   const handleOpenModal = () => {
@@ -187,4 +187,4 @@ const tarjetas = () => {
   );
 };
 
-export default tarjetas;
+export default Tarjetas;
