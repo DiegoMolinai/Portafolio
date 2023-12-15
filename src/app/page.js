@@ -5,7 +5,6 @@ import { Carousel } from "react-bootstrap";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import fondoConfig from "./components/config/fondo-config";
 import Header from "./components/header";
-import Proyectos from "./pages/proyectos";
 import Tarjetas from "./components/tarjetas";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
@@ -54,7 +53,6 @@ export default function Home() {
         <Header />
         <div className="flex-1 flex-wrap flex-col mx-2">
           {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
-          {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
 
           <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-4 border-solid border-black border-4 mx-auto w-full lg:w-1/3 hover:text-white">
             <div className="flex flex-col lg:flex-row">
@@ -67,7 +65,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-4 lg:mx-0 mt-4 mb-4">
-            {/* PRIMERA TARJETA */}
             {/* PRIMERA TARJETA */}
 
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 hover:text-white">
@@ -104,14 +101,14 @@ export default function Home() {
 
                   {/* Educacion */}
                   <div className="max-w-2xl">
-                    <h2 className="text-4xl font-bold mb-2">
+                    <h2 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-2 mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Información Educativa:
                     </h2>
                     <ul className="list-disc pl-4 text-xl">
-                      <li>Educación Básica - Colegio San Luis, Antofagasta</li>
-                      <li>Educación Media - Colegio San Luis, Antofagasta</li>
+                      <li>Educación Básica:<br></br>Colegio San Luis, Antofagasta.</li>
+                      <li>Educación Media:<br></br>Colegio San Luis, Antofagasta.</li>
                       <li>
-                        Educación Universitaria - Universidad Mayor, Santiago
+                        Educación Universitaria:<br></br>Universidad Mayor, Santiago.
                       </li>
                     </ul>
                   </div>
@@ -132,7 +129,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* SEGUNDA TARJETA */}
             {/* SEGUNDA TARJETA */}
 
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 hover:text-white">
@@ -254,7 +250,6 @@ export default function Home() {
               </div>
             </div>
             {/* TERCERA TARJETA */}
-            {/* TERCERA TARJETA */}
 
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 hover:text-white">
               <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
@@ -270,7 +265,6 @@ export default function Home() {
             </div>
           </div>
           {/* TARJETAS PROYECTOS INFERIOR */}
-          {/* TARJETAS PROYECTOS INFERIOR */}
 
           <div className="mx-4 lg:mx-0 mb-4">
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 w-full hover:text-white">
@@ -281,13 +275,12 @@ export default function Home() {
             </div>
           </div>
           {/* TARJETA TEMP */}
-          {/* TARJETA TEMP */}
 
           <div className="mx-4 lg:mx-0 mb-4">
             <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 w-full flex flex-wrap justify-center lg:justify-around items-center hover:text-white">
 
               <h2 className="text-4xl font-bold mb-4 text-center underline decoration-2 underline-offset-8">
-                Proyectos Personales / Experiencia
+                Contacto
               </h2>
               <div className="flex flex-wrap justify-center lg:justify-around items-center w-full" style={{fontWeight:"bolder"}}>
               <a

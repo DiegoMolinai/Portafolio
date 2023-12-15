@@ -6,7 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const ModalTarjetas = (props) => {
-    console.log(props);
   return (
     <Modal
       {...props}
