@@ -1,28 +1,23 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { Carousel } from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import fondoConfig from "./components/config/fondo-config";
 import Header from "./components/header";
 import Proyectos from "./pages/proyectos";
 import Tarjetas from "./components/tarjetas";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
 export default function Home() {
   const imagesdeporte = [
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837983/Portafolio/15665755_10211386478399980_2727440500788268227_n_votplp.jpg",
+    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837683/Portafolio/Screenshot_1_egdynl.png",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837992/Portafolio/FOTOS_IPHONE_152_mangdr.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701838006/Portafolio/6517_10201291752518142_145540072_n_viqnez.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794612/Portafolio/23561525_10214573694038379_5356516484944621923_n_mq9b8k.jpg",
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701794743/Portafolio/IMG_20231205_100327_gjxqbk.jpg",
-  ];
-  const imagesprogramacion = [
-    "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837683/Portafolio/Screenshot_1_egdynl.png",
-    "",
-    "",
-    "",
-    "",
   ];
 
   const Carrusel = ({ images }) => {
@@ -33,13 +28,11 @@ export default function Home() {
             <Carousel.Item key={index}>
               <div className="h-96 flex items-center justify-center">
                 <div className="aspect-w-1 aspect-h-1">
-                  <div className="flex items-center justify-center w-full h-full">
-                    <img
-                      className="max-w-full max-h-full object-contain h-96 rounded-3xl"
-                      src={imageUrl}
-                      alt={`Slide ${index + 1}`}
-                    />
-                  </div>
+                  <img
+                    className="max-w-full max-h-full object-cover h-96 rounded-3xl border-3 border-solid border-black"
+                    src={imageUrl}
+                    alt={`Slide ${index + 1}`}
+                  />
                 </div>
               </div>
             </Carousel.Item>
@@ -63,10 +56,10 @@ export default function Home() {
           {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
           {/* CUADRO SUPERIOR SOBRE TARJETAS CON NOMBRE DIEGO MOLINA */}
 
-          <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-4 border-solid border-black border-4 text-black hover:text-white mx-auto w-full lg:w-1/3">
+          <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 mt-4 border-solid border-black border-4 mx-auto w-full lg:w-1/3 hover:text-white">
             <div className="flex flex-col lg:flex-row">
               <div className="w-full">
-                <h1 className="text-5xl font-bold mb-2 text-center">
+                <h1 className="text-4xl font-bold mb-2 text-center">
                   Diego Molina
                 </h1>
               </div>
@@ -77,7 +70,7 @@ export default function Home() {
             {/* PRIMERA TARJETA */}
             {/* PRIMERA TARJETA */}
 
-            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 hover:text-white">
               {/* CONTENIDO */}
               {/* CONTENIDO */}
 
@@ -85,44 +78,47 @@ export default function Home() {
                 {/* IMAGEN DE PERFIL */}
                 {/* IMAGEN DE PERFIL */}
 
-                <div className="lg:pr-4">
+                <div>
                   <img
                     src="https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701418602/Portafolio/IMG20230728163340_j0dtm9.jpg"
                     alt="Imagen de perfil"
-                    className="rounded-lg border border-solid border-black h-64"
+                    className="max-w-full max-h-full object-cover rounded-lg border-3 border-solid border-black h-64"
                   />
                 </div>
                 {/* INFORMACION */}
                 {/* INFORMACION */}
 
-                <div className="w-full font-bold rounded">
+                <div className="w-full font-bold rounded text-justify">
                   {/* Información Personal */}
                   <div>
-                    <h1 className="text-5xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-5xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
+                    <h1 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-2 mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Información Personal
                     </h1>
                     <p className="text-xl">
-                      Soy un apasionado desarrollador web con experiencia en
-                      tecnologías como React, Node.js y MongoDB. Me encanta
-                      aprender y aplicar nuevas tecnologías para crear
-                      soluciones innovadoras.
+                      Ingeniero Civil En Computación E Informática apasionado
+                      por el desarrollo de software y la resolución de
+                      problemas. Busco contribuir con mis habilidades técnicas
+                      en un entorno dinámico.
                     </p>
                   </div>
 
                   {/* Educacion */}
-                  <div>
-                    <h1 className="text-5xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-5xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
-                      Educacion
-                    </h1>
-                    <p className="text-xl">
-                      Ingeniero Civil en Computación e Informática <br />
-                      Universidad Mayor
-                    </p>
+                  <div className="max-w-2xl">
+                    <h2 className="text-4xl font-bold mb-2">
+                      Información Educativa:
+                    </h2>
+                    <ul className="list-disc pl-4 text-xl">
+                      <li>Educación Básica - Colegio San Luis, Antofagasta</li>
+                      <li>Educación Media - Colegio San Luis, Antofagasta</li>
+                      <li>
+                        Educación Universitaria - Universidad Mayor, Santiago
+                      </li>
+                    </ul>
                   </div>
 
                   {/* Habilidades Blandas */}
                   <div>
-                    <h1 className="text-5xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-5xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
+                    <h1 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Habilidades Blandas
                     </h1>
                     <ul className="list-disc pl-6 text-xl">
@@ -139,12 +135,12 @@ export default function Home() {
             {/* SEGUNDA TARJETA */}
             {/* SEGUNDA TARJETA */}
 
-            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 hover:text-white">
               {/* Contenido */}
               <div className="flex flex-col lg:flex-row items-center">
                 {/* Lenguajes y Tecnologías */}
                 <div className="w-full lg:w-full flex flex-col lg:justify-between">
-                  <h2 className="text-5xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
+                  <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                     Frontend
                   </h2>
                   {/* Agrega imágenes o logos de tecnologías de Frontend */}
@@ -180,7 +176,7 @@ export default function Home() {
                       className="w-20 mx-0 lg:w-1/6"
                     />
                   </div>
-                  <h2 className="text-5xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
+                  <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                     Backend
                   </h2>
                   {/* Agrega imágenes o logos de tecnologías de Backend */}
@@ -217,7 +213,7 @@ export default function Home() {
                       width="60"
                     />
                   </div>
-                  <h2 className="text-5xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
+                  <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                     Software
                   </h2>
                   {/* Agrega imágenes o logos de tecnologías de Software */}
@@ -260,34 +256,89 @@ export default function Home() {
             {/* TERCERA TARJETA */}
             {/* TERCERA TARJETA */}
 
-            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white">
-              <h2 className="text-5xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 hover:text-white">
+              <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
                 Hobbies e Intereses
               </h2>
               <div className="flex flex-col lg:flex-row lg:space-y-0 lg:space-x-4 items-center">
-                <div className="flex-1 lg:w-1/2 md:w-1/3">
+                <div className="flex-1 lg:w-1/2">
                   <div className="h-full flex flex-col justify-center items-center">
-                    <h2 className="text-2xl font-semibold">Natacion</h2>
-                      <Carrusel images={imagesdeporte} />
+                    <Carrusel images={imagesdeporte} />
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
           {/* TARJETAS PROYECTOS INFERIOR */}
           {/* TARJETAS PROYECTOS INFERIOR */}
 
           <div className="mx-4 lg:mx-0 mb-4">
-            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full">
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 w-full hover:text-white">
+              <h2 className="text-4xl font-bold mb-2 text-center underline decoration-2 underline-offset-8">
+                Proyectos Personales / Experiencia
+              </h2>
               <Tarjetas />
             </div>
           </div>
-          {/* TARJETAS GALERIA IMAGENES HOBBIES E INTERESES */}
-          {/* TARJETAS GALERIA IMAGENES HOBBIES E INTERESES */}
+          {/* TARJETA TEMP */}
+          {/* TARJETA TEMP */}
 
           <div className="mx-4 lg:mx-0 mb-4">
-            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 text-black hover:text-white w-full"></div>
+            <div className="backdrop-blur-2xl hover:backdrop-invert-[.70] shadow-md rounded-lg p-4 border-solid border-black border-4 w-full flex flex-wrap justify-center lg:justify-around items-center hover:text-white">
+
+              <h2 className="text-4xl font-bold mb-4 text-center underline decoration-2 underline-offset-8">
+                Proyectos Personales / Experiencia
+              </h2>
+              <div className="flex flex-wrap justify-center lg:justify-around items-center w-full" style={{fontWeight:"bolder"}}>
+              <a
+                href="https://github.com/DiegoMolinai"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", textDecoration: "none", border:"3px solid black", backgroundColor:"rgba(0,0,0,0.5)"}}
+                className="rounded"
+              >
+                <div className="flex flex-col items-center mx-2 my-2 lg:my-0 hover:text-white">
+                  <FaGithub className="text-4xl lg:text-5xl" />
+                  <span>Github</span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/diego-molina-illanes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", textDecoration: "none", border:"3px solid black", backgroundColor:"rgba(0,0,0,0.5)"}}
+                className="rounded"
+              >
+                <div className="flex flex-col items-center mx-2 my-2 lg:my-0 hover:text-white">
+                  <FaLinkedin className="text-4xl lg:text-5xl" />
+                  <span>LinkedIn</span>
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/diegomolinai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", textDecoration: "none", border:"3px solid black", backgroundColor:"rgba(0,0,0,0.5)"}}
+                className="rounded"
+              >
+                <div className="flex flex-col items-center mx-2 my-2 lg:my-0 hover:text-white">
+                  <FaInstagram className="text-4xl lg:text-5xl" />
+                  <span>Instagram</span>
+                </div>
+              </a>
+              <a
+                href="mailto:diegomolinai@outlook.com"
+                style={{ color: "white", textDecoration: "none", border:"3px solid black", backgroundColor:"rgba(0,0,0,0.5)"}}
+                className="rounded"
+              >
+                <div className="flex flex-col items-center mx-2 my-2 lg:my-0 hover:text-white">
+                  <AiOutlineMail className="text-4xl lg:text-5xl" />
+                  <span>Correo</span>
+                </div>
+              </a>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>

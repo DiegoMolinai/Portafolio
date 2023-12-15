@@ -147,4 +147,8 @@ html {
     padding: 15px 20px;
     text-transform: uppercase;
   }
+
+  #botonmodal{
+    border: 5px solid white;
+  }
   
