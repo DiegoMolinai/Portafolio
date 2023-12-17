@@ -2,7 +2,6 @@
 import React, { useCallback, useState } from "react";
 import Particles from "react-particles";
 import { Carousel } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import fondoConfig from "./components/config/fondo-config";
 import Header from "./components/header";
@@ -12,8 +11,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import ModalCertificaciones from "./components/modals/modalcertificaciones";
 
 export default function Home() {
-  const [showModalCertificaciones, setShowModalCertificaciones] =
-    useState(false);
 
   const imagesdeporte = [
     "https://res.cloudinary.com/dyvcbvwzi/image/upload/v1701837983/Portafolio/15665755_10211386478399980_2727440500788268227_n_votplp.jpg",
@@ -96,7 +93,7 @@ export default function Home() {
                     <h1 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-2 mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Información Personal
                     </h1>
-                    <p className="text-xl">
+                    <p className="text-lg">
                       Ingeniero Civil En Computación E Informática apasionado
                       por el desarrollo de software y la resolución de
                       problemas. Busco contribuir con mis habilidades técnicas
@@ -109,26 +106,26 @@ export default function Home() {
                     <h2 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-2 mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Información Educativa
                     </h2>
-                    <ul className="list-disc pl-6 text-xl">
+                    <ul className="list-disc pl-6 text-lg">
                       <li>
-                        Educación Básica:<br></br>Colegio San Luis, Antofagasta.
+                        Educación Básica: Colegio San Luis, Antofagasta.
                       </li>
                       <li>
-                        Educación Media:<br></br>Colegio San Luis, Antofagasta.
+                        Educación Media: Colegio San Luis, Antofagasta.
                       </li>
                       <li>
-                        Educación Universitaria:<br></br>Universidad Mayor,
+                        Educación Universitaria: Universidad Mayor,
                         Santiago.
                       </li>
                     </ul>
                   </div>
-
+                  
                   {/* Habilidades Blandas */}
                   <div className="max-w-2xl">
-                    <h1 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
+                    <h1 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Habilidades Blandas
                     </h1>
-                    <ul className="list-disc pl-6 text-xl">
+                    <ul className="list-disc pl-6 text-lg">
                       <li>Trabajo en equipo</li>
                       <li>Comunicación efectiva</li>
                       <li>Pensamiento crítico</li>
@@ -138,32 +135,35 @@ export default function Home() {
                   </div>
                   {/* Experiencia Laboral */}
                   <div className="max-w-2xl">
-                    <h2 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mt-6 mb-2 underline decoration-2 underline-offset-8 font-bold">
+                    <h2 className="text-4xl sm:text-4xl md:text-3xl lg:text-2xl xl:text-4xl mb-2 underline decoration-2 underline-offset-8 font-bold">
                       Experiencia Desarrollo
                     </h2>
-                    <div className="mb-6">
-                      <div className="mb-4">
+                    <div>
+                      <div>
                         <h3 className="text-2xl font-bold">
                           EMETEL S.A (Área Logística):
-                          <span className="text-lg ml-2">
+                          <br></br>
+                          <span className="text-lg">
                             (05/01/2021 - 05/03/2021)
                           </span>
                         </h3>
-                        <p className="text-xl">
+                        <p className="text-lg">
                           Desarrollo de un sistema integral que utilizaba
                           Selenium y C-Panel para gestionar cuentas de usuario.
-                          Implementación a tablas Excel. <br></br>Brindar
+                          Implementación a tablas Excel.  Brindar
                           asistencia técnica a los trabajadores.
                         </p>
                       </div>
-                      <div className="mb-4">
+                      <hr></hr>
+                      <div>
                         <h3 className="text-2xl font-bold">
                           GTD Manquehue S.A (Área Cloud):
-                          <span className="text-lg ml-2">
+                          <br></br>
+                          <span className="text-lg">
                             (01/11/2021 - 01/02/2022)
                           </span>
                         </h3>
-                        <p className="text-xl">
+                        <p className="text-lg">
                           Colaboración en el desarrollo de aplicación web y su
                           migración a la nube de Azure mediante Kubernetes.
                           Realización de cursos de Azure y aprender otras
@@ -290,20 +290,6 @@ export default function Home() {
                       alt="Visual Studio"
                       className="w-24 h-auto mx-auto"
                       width="60"
-                    />
-                  </div>
-                  {/* Informacion Certificados */}
-                  <div className="flex flex-wrap justify-center">
-                    <Button
-                      variant="info"
-                      id="botonmodal"
-                      onClick={() => setShowModalCertificaciones(true)}
-                    >
-                      Mostrar Certificados
-                    </Button>
-                    <ModalCertificaciones
-                      show={showModalCertificaciones}
-                      onHide={() => setShowModalCertificaciones(false)}
                     />
                   </div>
                 </div>

@@ -49,8 +49,7 @@ html {
     -webkit-perspective: 1000px;
   }
   
-  .flip-box-front,
-  .flip-box-back {
+  .flip-box-front{
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -61,6 +60,21 @@ html {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border: 4px solid #000;
+    border-radius: 8px;
+
+  }
+  
+  .flip-box-back {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 475px;
+    -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 4px solid #FFF;
     border-radius: 8px;
 
   }
@@ -150,9 +164,14 @@ html {
 
   #botonmodal{
     border: 5px solid white;
-    width:100%;
-    height: 100%;
+    background-color: black;
+    color: white;
     font-weight: bold;
-    font-size: x-large  w;
+    font-size: x-large
+  }
+  #botonmodal:hover{
+    background-color: lightgoldenrodyellow;
+    border: 5px solid black;
+    color: black;
   }
   
