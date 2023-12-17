@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../estilos/tarjetas.css";
 import Button from "react-bootstrap/Button";
-import ModalTarjetas from "./modals/modaltarjetas";
 import ModalSpring from "./modals/modalspring";
 import ModalNext from "./modals/modalnext";
 import ModalCSharp from "./modals/modalcsharp";
@@ -34,9 +33,9 @@ const Tarjetas = () => {
               style={{ backgroundColor: "black" }}
             >
               <div className="inner color-white">
-                <h3 className="flip-box-header">PROYECTO SPRINGBOOT</h3>
-                <p>API CRUD Con SpringBoot</p>
-                <Button variant="info" id="botonmodal" onClick={() => setShowModal1(true)}>Ampliar Informacion</Button>
+                <h3 className="flip-box-header">Proyecto SpringBoot</h3>
+                <p>API C.R.U.D Con SpringBoot</p>
+                <Button variant="info" id="botonmodal" onClick={() => setShowModal1(true)}>Ampliar Información</Button>
                 <ModalSpring show={showModal1} onHide={() => setShowModal1(false)} />
               </div>
             </div>
@@ -59,9 +58,9 @@ const Tarjetas = () => {
               style={{ backgroundColor: "black" }}
             >
               <div className="inner color-white">
-                <h3 className="flip-box-header">Never Sleeps</h3>
-                <p>A short sentence describing this callout is.</p>
-                <Button variant="info" id="botonmodal" onClick={() => setShowModal2(true)}>Ampliar Informacion</Button>
+                <h3 className="flip-box-header">Proyecto React</h3>
+                <p>Proyecto de defensa de título para FMEC</p>
+                <Button variant="info" id="botonmodal" onClick={() => setShowModal2(true)}>Ampliar Información</Button>
                 <ModalReact show={showModal2} onHide={() => setShowModal2(false)} />
               </div>
             </div>
@@ -84,9 +83,9 @@ const Tarjetas = () => {
               style={{ backgroundColor: "black" }}
             >
               <div className="inner color-white">
-                <h3 className="flip-box-header">Never Sleeps</h3>
-                <p>A short sentence describing this callout is.</p>
-                <Button variant="info" id="botonmodal" onClick={() => setShowModal3(true)}>Ampliar Informacion</Button>
+                <h3 className="flip-box-header">Proyecto Next.js</h3>
+                <p>Portafolio</p>
+                <Button variant="info" id="botonmodal" onClick={() => setShowModal3(true)}>Ampliar Información</Button>
                 <ModalNext show={showModal3} onHide={() => setShowModal3(false)} />
               </div>
             </div>
@@ -110,9 +109,9 @@ const Tarjetas = () => {
               style={{ backgroundColor: "black" }}
             >
               <div className="inner color-white">
-                <h3 className="flip-box-header">Never Sleeps</h3>
-                <p>A short sentence describing this callout is.</p>
-                <Button variant="info" id="botonmodal" onClick={() => setShowModal4(true)}>Ampliar Informacion</Button>
+                <h3 className="flip-box-header">Proyecto C#</h3>
+                <p>Decisión Proyecto</p>
+                <Button variant="info" id="botonmodal" onClick={() => setShowModal4(true)}>Ampliar Información</Button>
                 <ModalCSharp show={showModal4} onHide={() => setShowModal4(false)} />
               </div>
             </div>
@@ -141,7 +140,7 @@ const Tarjetas = () => {
               <div className="inner color-white">
                 <h3 className="flip-box-header">Proyecto</h3>
                 <p>En Construccion</p>
-                <Button variant="info" id="botonmodal" onClick={() => setShowModal5(true)}>Ampliar Informacion</Button>
+                <Button variant="info" id="botonmodal" onClick={() => setShowModal5(true)}>Ampliar Información</Button>
                 <ModalTemp show={showModal5} onHide={() => setShowModal5(false)} />
               </div>
             </div>
