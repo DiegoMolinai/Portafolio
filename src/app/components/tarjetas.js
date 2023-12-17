@@ -196,7 +196,7 @@ const Tarjetas = () => {
         </div>
 
         {/* Informacion Certificados */}
-        <div className="flex flex-wrap justify-center h-20">
+        <div className="flex flex-wrap justify-center grow w-full h-20">
           <Button
             id="botonmodal"
             onClick={() => setShowModalCertificaciones(true)}

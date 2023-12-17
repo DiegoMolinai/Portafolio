@@ -60,6 +60,7 @@ const ModalCertificaciones = (props) => {
           >
             {/* Foundational C# with Microsoft */}
             <AccordionItem
+            id="certificado"
               key="1"
               aria-label="Foundational"
               title="Foundational C# with Microsoft"
@@ -74,6 +75,7 @@ const ModalCertificaciones = (props) => {
             </AccordionItem>
             {/* Scrum Foundation Professional Certification - SFPC™ */}
             <AccordionItem
+            id="certificado"
               key="2"
               aria-label="Scrum"
               title="Scrum Foundation Professional Certification - SFPC™"
@@ -88,6 +90,7 @@ const ModalCertificaciones = (props) => {
             </AccordionItem>
             {/* Introduction to Cybersecurity */}
             <AccordionItem
+            id="certificado"
               key="3"
               aria-label="Cybersecurity"
               title="Introduction to Cybersecurity"
@@ -102,6 +105,7 @@ const ModalCertificaciones = (props) => {
             </AccordionItem>
             {/* EF SET English Certificate (C1 Proficient) */}
             <AccordionItem
+            id="certificado"
               key="6"
               aria-label="English Certificate"
               title="EF SET English Certificate (C1 Proficient)"
@@ -116,6 +120,7 @@ const ModalCertificaciones = (props) => {
             </AccordionItem>
             {/* Lifelong Learning */}
             <AccordionItem
+            id="certificado"
               key="7"
               aria-label="Lifelong"
               title="Lifelong Learning"
