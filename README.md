@@ -1,1 +1,55 @@
-# 🌐 Mi Portafolio Frontend\n\n¡Bienvenido a mi portafolio! Este proyecto representa mi trabajo como desarrollador frontend, destacando mis habilidades en tecnologías modernas, diseño web y desarrollo de aplicaciones.\n\n---\n\n## 🚀 Tecnologías utilizadas\n\nEn este proyecto, implementé un stack tecnológico versátil para garantizar un diseño atractivo y un rendimiento eficiente:\n\n- **Frontend**:\n  - React.js\n  - JavaScript (ES6+)\n  - HTML5\n  - CSS3\n- **Backend**:\n  - Node.js\n  - MongoDB\n- **Herramientas y entornos**:\n  - Visual Studio Code\n  - Git & GitHub\n  - npm / yarn\n\n---\n\n## 📂 Características\n\n- **Diseño atractivo**: Construido con React y CSS para una experiencia de usuario fluida.\n- **Completamente responsivo**: Adaptado a diferentes tamaños de pantalla, incluyendo dispositivos móviles y tablets.\n- **Organización de proyectos**: Presentación de mis últimos proyectos destacados.\n- **Formulario de contacto**: Permite a los usuarios enviarme mensajes directamente desde el portafolio.\n- **Animaciones interactivas**: Uso de bibliotecas como `motion` para transiciones suaves y dinámicas.\n\n---\n\n## 📸 Capturas de pantalla\n\n### Página de inicio\n![Inicio](./screenshots/home.png)\n\n### Sección de proyectos\n![Proyectos](./screenshots/projects.png)\n\n### Formulario de contacto\n![Contacto](./screenshots/contact.png)\n\n---\n\n## ⚙️ Instalación y ejecución\n\nSigue estos pasos para ejecutar el proyecto en tu entorno local:\n\n1. **Clona este repositorio**:\n   ```bash\n   git clone https://github.com/tu-usuario/tu-portafolio.git\n   ```\n2. **Navega al directorio del proyecto**:\n   ```bash\n   cd tu-portafolio\n   ```\n3. **Instala las dependencias**:\n   ```bash\n   npm install\n   ```\n4. **Inicia el servidor de desarrollo**:\n   ```bash\n   npm start\n   ```\n5. Abre tu navegador en [http://localhost:3000](http://localhost:3000).\n\n---\n\n## 🛠 Estructura del proyecto\n\n```plaintext\n📂 src\n├── 📂 components    # Componentes reutilizables\n├── 📂 assets        # Imágenes, íconos y archivos estáticos\n├── 📂 pages         # Páginas principales del sitio\n├── 📂 styles        # Archivos CSS\n├── 📂 utils         # Funciones y utilidades comunes\n└── index.js         # Punto de entrada principal\n```\n\n---\n\n## 🌟 Sobre mí\n\nSoy un desarrollador frontend apasionado por crear experiencias digitales atractivas e intuitivas. Mi enfoque está en construir soluciones eficientes y modernas utilizando las mejores herramientas disponibles. \n\nSi te interesa colaborar o tienes alguna pregunta, ¡no dudes en contactarme!\n\n---\n\n## 📞 Contacto\n\n- **Correo**: [diegomolinai@outlook.com](mailto:diegomolinai@outlook.com)\n- **LinkedIn**: [Diego Molina Illanes](https://www.linkedin.com/in/diego-molina-illanes/)\n- **GitHub**: [@DiegoMolinai](https://github.com/DiegoMolinai)\n\n---\n\n## 📝 Licencia\n\nEste proyecto está bajo la Licencia MIT. Puedes consultar más detalles en el archivo [LICENSE](./LICENSE).\n
+# 🌐 Mi Portafolio Frontend
+
+¡Bienvenido a mi portafolio! Este proyecto representa mi trabajo como desarrollador frontend, destacando mis habilidades en tecnologías modernas, diseño web y desarrollo de aplicaciones.
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+En este proyecto, implementé un stack tecnológico versátil para garantizar un diseño atractivo y un rendimiento eficiente:
+
+- **Frontend**:
+  - React.js
+  - JavaScript (ES6+)
+  - HTML5
+  - CSS3
+- **Backend**:
+  - Node.js
+  - MongoDB
+- **Herramientas y entornos**:
+  - Visual Studio Code
+  - Git & GitHub
+  - npm / yarn
+
+---
+
+## 📂 Características
+
+- **Diseño atractivo**: Construido con React y CSS para una experiencia de usuario fluida.
+- **Completamente responsivo**: Adaptado a diferentes tamaños de pantalla, incluyendo dispositivos móviles y tablets.
+- **Organización de proyectos**: Presentación de mis últimos proyectos destacados.
+- **Formulario de contacto**: Permite a los usuarios enviarme mensajes directamente desde el portafolio.
+- **Animaciones interactivas**: Uso de bibliotecas como `motion` para transiciones suaves y dinámicas.
+
+---
+
+## 📸 Capturas de pantalla
+
+### Página de inicio
+![Inicio](./screenshots/home.png)
+
+### Sección de proyectos
+![Proyectos](./screenshots/projects.png)
+
+### Formulario de contacto
+![Contacto](./screenshots/contact.png)
+
+---
+
+## ⚙️ Instalación y ejecución
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+
+1. **Clona este repositorio**:
+   ```bash
+   git clone https://github.com/tu-usuario/tu-portafolio.git
